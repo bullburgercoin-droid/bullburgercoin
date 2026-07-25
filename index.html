@@ -14,14 +14,38 @@
     }
 
     body{
-      background:#0b0b0b;
-      color:white;
-    }
+  margin:0;
+  color:white;
+  font-family:Arial,Helvetica,sans-serif;
+  background:
+  radial-gradient(circle at top,#FFD70022 0%,transparent 40%),
+  radial-gradient(circle at bottom right,#ff000015 0%,transparent 35%),
+  linear-gradient(135deg,#050505,#111,#050505);
+  background-size:cover;
+  animation:bgmove 12s ease infinite;
+}
+
+@keyframes bgmove{
+
+0%{
+background-position:0% 50%;
+}
+
+50%{
+background-position:100% 50%;
+}
+
+100%{
+background-position:0% 50%;
+}
+
+}
 
     header{
-      text-align:center;
-      padding:70px 20px;
-      background:linear-gradient(180deg,#111,#000);
+text-align:center;
+padding:90px 20px;
+background:rgba(0,0,0,.45);
+backdrop-filter:blur(8px);
     }
 
     header img{
@@ -77,9 +101,12 @@
       margin:auto;
       padding:70px 25px;
     }
-
-    .card{
-      background:#151515;
+.card{
+background:rgba(25,25,25,.75);
+backdrop-filter:blur(10px);
+border:1px solid rgba(255,215,0,.25);
+box-shadow:0 0 20px rgba(255,215,0,.12);
+    
       padding:25px;
       border-radius:15px;
       margin-top:25px;
