@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>BullBurger | The Tastiest Meme Coin on Solana</title>
+<title>BullBurger | Flip Burgers. Fuel Bull Runs.</title>
 
 <style>
 
@@ -13,224 +13,106 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:Arial,Helvetica,sans-serif;
-scroll-behavior:smooth;
 }
 
 body{
-
-background:
-radial-gradient(circle at top,#FFD70022 0%,transparent 40%),
-radial-gradient(circle at bottom,#ff000020 0%,transparent 35%),
-linear-gradient(135deg,#050505,#111,#050505);
-
-background-size:400% 400%;
-
-animation:bg 12s infinite;
-
+background:#080808;
 color:white;
-
 overflow-x:hidden;
-
 }
 
-@keyframes bg{
-
-0%{background-position:0% 50%;}
-
-50%{background-position:100% 50%;}
-
-100%{background-position:0% 50%;}
-
-}
-
-nav{
-
+body::before{
+content:"";
 position:fixed;
-
 top:0;
-
+left:0;
 width:100%;
-
-padding:18px;
-
-background:rgba(0,0,0,.6);
-
-backdrop-filter:blur(12px);
-
-display:flex;
-
-justify-content:space-between;
-
-align-items:center;
-
-z-index:999;
-
+height:100%;
+background:
+radial-gradient(circle at 20% 20%,rgba(255,180,0,.18),transparent 35%),
+radial-gradient(circle at 80% 40%,rgba(255,220,0,.10),transparent 35%),
+linear-gradient(180deg,#0b0b0b,#151515,#090909);
+z-index:-2;
+animation:bgMove 12s ease-in-out infinite alternate;
 }
 
-.logo{
+@keyframes bgMove{
+0%{transform:scale(1);}
+100%{transform:scale(1.08);}
+}
 
+header{
+text-align:center;
+padding:70px 20px;
+}
+
+h1{
+font-size:60px;
 color:#FFD700;
-
-font-size:28px;
-
-font-weight:bold;
-
+text-shadow:0 0 25px gold;
 }
 
-nav a{
-
-color:white;
-
-text-decoration:none;
-
-margin-left:18px;
-
+.subtitle{
+margin-top:15px;
+font-size:22px;
+color:#ddd;
 }
 
 .hero{
-
-height:100vh;
-
-display:flex;
-
-flex-direction:column;
-
-justify-content:center;
-
-align-items:center;
-
+max-width:1100px;
+margin:auto;
+padding:30px;
 text-align:center;
-
-padding:20px;
-
 }
 
 .hero img{
-
-width:260px;
-
-border-radius:25px;
-
-box-shadow:0 0 35px gold;
-
-animation:float 4s ease-in-out infinite;
-
+width:320px;
+max-width:90%;
+border-radius:20px;
+box-shadow:0 0 40px gold;
+animation:float 3s ease-in-out infinite;
 }
 
 @keyframes float{
-
-0%,100%{
-
-transform:translateY(0px);
-
-}
-
-50%{
-
-transform:translateY(-15px);
-
-}
-
-}
-
-.hero h1{
-
-font-size:65px;
-
-margin-top:25px;
-
-color:#FFD700;
-
-}
-
-.hero h2{
-
-margin-top:10px;
-
-font-size:30px;
-
-}
-
-.hero p{
-
-margin-top:15px;
-
-color:#ddd;
-
-max-width:650px;
-
-line-height:1.8;
-
+0%{transform:translateY(0);}
+50%{transform:translateY(-12px);}
+100%{transform:translateY(0);}
 }
 
 .btn{
-
 display:inline-block;
-
-padding:16px 35px;
-
 margin:10px;
-
-border-radius:50px;
-
-text-decoration:none;
-
-font-weight:bold;
-
-transition:.3s;
-
-}
-
-.x{
-
+padding:14px 28px;
 background:#FFD700;
-
 color:black;
-
-}
-
-.telegram{
-
-background:#229ED9;
-
-color:white;
-
+font-weight:bold;
+border-radius:40px;
+text-decoration:none;
+transition:.3s;
 }
 
 .btn:hover{
-
 transform:scale(1.08);
-
-box-shadow:0 0 20px gold;
-
-}section{
-max-width:1100px;
-margin:auto;
-padding:80px 20px;
 }
 
-.card{
-background:rgba(255,255,255,.06);
-backdrop-filter:blur(12px);
-border:1px solid rgba(255,215,0,.2);
+.section{
+max-width:1000px;
+margin:40px auto;
 padding:30px;
+background:#111;
+border:1px solid #222;
 border-radius:20px;
-margin-top:25px;
-box-shadow:0 0 20px rgba(255,215,0,.08);
 }
 
-.card h3{
+.section h2{
 color:#FFD700;
 margin-bottom:15px;
-font-size:28px;
 }
 
 footer{
 text-align:center;
 padding:40px;
-background:#080808;
-color:#999;
-margin-top:60px;
+color:#aaa;
 }
 
 </style>
@@ -239,100 +121,176 @@ margin-top:60px;
 
 <body>
 
-<nav>
-
-<div class="logo">
-🍔 BullBurger
-</div>
-
-<div>
-<a href="https://x.com/BullBurgerCoin" target="_blank">X</a>
-<a href="https://t.me/BullBurgerCoin" target="_blank">Telegram</a>
-</div>
-
-</nav>
-
-<div class="hero">
-
-<img src="bullburger.png" alt="BullBurger Mascot">
+<header>
 
 <h1>BullBurger</h1>
 
-<h2>Flip Burgers. Fuel Bull Runs.</h2>
-
-<p>
-The Tastiest Meme Coin on Solana.<br>
-Community Powered • Meme Fueled • Built for Bulls.
+<p class="subtitle">
+🍔 Flip Burgers. Fuel Bull Runs. 🚀
 </p>
 
-<div>
+</header>
 
-<a class="btn x" href="https://x.com/BullBurgerCoin" target="_blank">
+<div class="hero">
+
+<img src="bullburger.png">
+
+<br><br>
+
+<a class="btn" href="https://x.com/BullBurgerCoin" target="_blank">
 Follow on X
 </a>
 
-<a class="btn telegram" href="https://t.me/BullBurgerCoin" target="_blank">
-Join Telegram
+<a class="btn" href="#">
+Telegram Soon
 </a>
 
-</div>
+</div><div class="section">
 
-</div>
-
-<section>
-
-<div class="card">
-
-<h3>🍔 About BullBurger</h3>
+<h2>🍔 About BullBurger</h2>
 
 <p>
-BullBurger ($BBGR) is a community-driven meme coin on Solana.
+BullBurger ($BBGR) is a community-driven meme coin built on Solana.
+
+We believe that every bull run deserves great memes, great vibes, and a strong community.
 
 No fake promises.
-No complicated roadmap.
+No complicated utilities.
 
-Just burgers, memes, and a community hungry for the next bull run.
+Just burgers, bulls, and believers.
 </p>
 
 </div>
 
-<div class="card">
+<div class="section">
 
-<h3>🚀 Roadmap</h3>
+<h2>🚀 Roadmap</h2>
 
 <p>
-✅ Brand Creation<br>
-✅ Website Launch<br>
-✅ Community Building<br>
-🚀 Pump.fun Launch<br>
-🌕 Grow the BullBurger Army
+
+✅ Build the Brand<br><br>
+
+✅ Launch Website<br><br>
+
+🔥 Grow X Community<br><br>
+
+🚀 Pump.fun Launch<br><br>
+
+🌕 Raydium Goal<br><br>
+
+💎 CoinGecko & CoinMarketCap
+
 </p>
 
 </div>
 
-<div class="card">
+<div class="section">
 
-<h3>💰 Token</h3>
+<h2>💰 Token Information</h2>
 
 <p>
-Name: BullBurger<br>
-Ticker: $BBGR<br>
-Network: Solana<br>
-Contract Address: Coming Soon
+
+Name : BullBurger
+
+<br><br>
+
+Ticker : $BBGR
+
+<br><br>
+
+Network : Solana
+
+<br><br>
+
+Contract :
+
+Coming Soon
+
 </p>
 
 </div>
 
-</section>
+<div class="section">
+
+<h2>🐂 Join The BullBurger Army</h2>
+
+<p>
+
+Every Bull Run Needs Fuel.
+
+<br><br>
+
+Follow us on X and join our Telegram community.
+
+</p>
+
+</div>
 
 <footer>
 
-🐂 Every Bull Run Needs Fuel. 🍔<br><br>
+🍔 BullBurger © 2026
 
-© 2026 BullBurger
+<br><br>
+
+Built with ❤️ by the Community
 
 </footer>
 
 </body>
 
-</html>
+</html>/* Floating glow animation */
+.hero::after{
+content:"";
+position:absolute;
+width:300px;
+height:300px;
+background:radial-gradient(circle,rgba(255,215,0,.25),transparent 70%);
+filter:blur(30px);
+z-index:-1;
+animation:glow 4s ease-in-out infinite;
+}
+
+@keyframes glow{
+0%,100%{
+transform:scale(1);
+opacity:.6;
+}
+50%{
+transform:scale(1.2);
+opacity:1;
+}
+}
+
+.section:hover{
+transform:translateY(-6px);
+transition:.3s;
+box-shadow:0 0 30px rgba(255,215,0,.2);
+}
+
+@media(max-width:768px){
+
+h1{
+font-size:42px;
+}
+
+.subtitle{
+font-size:18px;
+}
+
+.hero img{
+width:240px;
+}
+
+.section{
+margin:20px;
+padding:20px;
+}
+
+.btn{
+display:block;
+margin:12px auto;
+width:220px;
+text-align:center;
+}
+
+}
