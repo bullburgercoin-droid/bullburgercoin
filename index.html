@@ -1,223 +1,325 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BullBurger | The Tastiest Meme Coin</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family:Arial,Helvetica,sans-serif;
-    }
+<title>BullBurger | The Tastiest Meme Coin on Solana</title>
 
-    body{
-  margin:0;
-  color:white;
-  font-family:Arial,Helvetica,sans-serif;
-  background:
-  radial-gradient(circle at top,#FFD70022 0%,transparent 40%),
-  radial-gradient(circle at bottom right,#ff000015 0%,transparent 35%),
-  linear-gradient(135deg,#050505,#111,#050505);
-  background-size:cover;
-  animation:bgmove 12s ease infinite;
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+scroll-behavior:smooth;
 }
 
-@keyframes bgmove{
+body{
 
-0%{
-background-position:0% 50%;
+background:
+radial-gradient(circle at top,#FFD70022 0%,transparent 40%),
+radial-gradient(circle at bottom,#ff000020 0%,transparent 35%),
+linear-gradient(135deg,#050505,#111,#050505);
+
+background-size:400% 400%;
+
+animation:bg 12s infinite;
+
+color:white;
+
+overflow-x:hidden;
+
+}
+
+@keyframes bg{
+
+0%{background-position:0% 50%;}
+
+50%{background-position:100% 50%;}
+
+100%{background-position:0% 50%;}
+
+}
+
+nav{
+
+position:fixed;
+
+top:0;
+
+width:100%;
+
+padding:18px;
+
+background:rgba(0,0,0,.6);
+
+backdrop-filter:blur(12px);
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+z-index:999;
+
+}
+
+.logo{
+
+color:#FFD700;
+
+font-size:28px;
+
+font-weight:bold;
+
+}
+
+nav a{
+
+color:white;
+
+text-decoration:none;
+
+margin-left:18px;
+
+}
+
+.hero{
+
+height:100vh;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+padding:20px;
+
+}
+
+.hero img{
+
+width:260px;
+
+border-radius:25px;
+
+box-shadow:0 0 35px gold;
+
+animation:float 4s ease-in-out infinite;
+
+}
+
+@keyframes float{
+
+0%,100%{
+
+transform:translateY(0px);
+
 }
 
 50%{
-background-position:100% 50%;
-}
 
-100%{
-background-position:0% 50%;
-}
+transform:translateY(-15px);
 
 }
 
-    header{
-text-align:center;
-padding:90px 20px;
-background:rgba(0,0,0,.45);
-backdrop-filter:blur(8px);
-    }
+}
 
-    header img{
-      width:230px;
-      border-radius:20px;
-      box-shadow:0 0 25px gold;
-    }
+.hero h1{
 
-    h1{
-      margin-top:25px;
-      font-size:60px;
-      color:#FFD700;
-    }
+font-size:65px;
 
-    h2{
-      margin-top:15px;
-      font-size:28px;
-      color:white;
-    }
+margin-top:25px;
 
-    p{
-      margin-top:15px;
-      color:#ddd;
-      line-height:1.7;
-    }
+color:#FFD700;
 
-    .btn{
-      display:inline-block;
-      margin:15px;
-      padding:15px 35px;
-      border-radius:50px;
-      text-decoration:none;
-      font-weight:bold;
-      transition:.3s;
-    }
+}
 
-    .x{
-      background:#FFD700;
-      color:black;
-    }
+.hero h2{
 
-    .launch{
-      background:red;
-      color:white;
-    }
+margin-top:10px;
 
-    .btn:hover{
-      transform:scale(1.08);
-    }
+font-size:30px;
 
-    section{
-      max-width:1000px;
-      margin:auto;
-      padding:70px 25px;
-    }
+}
+
+.hero p{
+
+margin-top:15px;
+
+color:#ddd;
+
+max-width:650px;
+
+line-height:1.8;
+
+}
+
+.btn{
+
+display:inline-block;
+
+padding:16px 35px;
+
+margin:10px;
+
+border-radius:50px;
+
+text-decoration:none;
+
+font-weight:bold;
+
+transition:.3s;
+
+}
+
+.x{
+
+background:#FFD700;
+
+color:black;
+
+}
+
+.telegram{
+
+background:#229ED9;
+
+color:white;
+
+}
+
+.btn:hover{
+
+transform:scale(1.08);
+
+box-shadow:0 0 20px gold;
+
+}section{
+max-width:1100px;
+margin:auto;
+padding:80px 20px;
+}
+
 .card{
-background:rgba(25,25,25,.75);
-backdrop-filter:blur(10px);
-border:1px solid rgba(255,215,0,.25);
-box-shadow:0 0 20px rgba(255,215,0,.12);
-    
-      padding:25px;
-      border-radius:15px;
-      margin-top:25px;
-      border:1px solid #333;
-    }
+background:rgba(255,255,255,.06);
+backdrop-filter:blur(12px);
+border:1px solid rgba(255,215,0,.2);
+padding:30px;
+border-radius:20px;
+margin-top:25px;
+box-shadow:0 0 20px rgba(255,215,0,.08);
+}
 
-    footer{
-      text-align:center;
-      padding:40px;
-      background:#111;
-      color:#999;
-    }
-  </style>
+.card h3{
+color:#FFD700;
+margin-bottom:15px;
+font-size:28px;
+}
+
+footer{
+text-align:center;
+padding:40px;
+background:#080808;
+color:#999;
+margin-top:60px;
+}
+
+</style>
 
 </head>
 
 <body>
 
-<header>
+<nav>
 
-<img src="bullburger.png">
+<div class="logo">
+🍔 BullBurger
+</div>
+
+<div>
+<a href="https://x.com/BullBurgerCoin" target="_blank">X</a>
+<a href="https://t.me/BullBurgerCoin" target="_blank">Telegram</a>
+</div>
+
+</nav>
+
+<div class="hero">
+
+<img src="bullburger.png" alt="BullBurger Mascot">
 
 <h1>BullBurger</h1>
 
 <h2>Flip Burgers. Fuel Bull Runs.</h2>
 
 <p>
-The Tastiest Meme Coin on Solana.
+The Tastiest Meme Coin on Solana.<br>
+Community Powered • Meme Fueled • Built for Bulls.
 </p>
 
-<a class="btn x" href="https://x.com/BullBurgerCoin">
+<div>
+
+<a class="btn x" href="https://x.com/BullBurgerCoin" target="_blank">
 Follow on X
 </a>
 
-<a class="btn launch">
-Launch Soon
+<a class="btn telegram" href="https://t.me/BullBurgerCoin" target="_blank">
+Join Telegram
 </a>
 
-</header>
+</div>
+
+</div>
 
 <section>
 
-<h2>🍔 About</h2>
-
 <div class="card">
 
-BullBurger ($BBGR) is a community-driven meme coin built on Solana.
+<h3>🍔 About BullBurger</h3>
 
-<br><br>
+<p>
+BullBurger ($BBGR) is a community-driven meme coin on Solana.
 
 No fake promises.
-
 No complicated roadmap.
 
-Just burgers, memes and the strongest bull community.
+Just burgers, memes, and a community hungry for the next bull run.
+</p>
 
 </div>
 
-</section>
-
-<section>
-
-<h2>🚀 Roadmap</h2>
-
 <div class="card">
 
-✅ Brand Creation
+<h3>🚀 Roadmap</h3>
 
-<br>
-
-✅ Website
-
-<br>
-
-✅ Community Building
-
-<br>
-
-🚀 Pump.fun Launch
-
-<br>
-
-🌕 Grow BullBurger Army
+<p>
+✅ Brand Creation<br>
+✅ Website Launch<br>
+✅ Community Building<br>
+🚀 Pump.fun Launch<br>
+🌕 Grow the BullBurger Army
+</p>
 
 </div>
 
-</section>
-
-<section>
-
-<h2>💰 Token</h2>
-
 <div class="card">
 
-Name: BullBurger
+<h3>💰 Token</h3>
 
-<br><br>
-
-Ticker: $BBGR
-
-<br><br>
-
-Network: Solana
-
-<br><br>
-
-Contract Address
-
-<br>
-
-Coming Soon
+<p>
+Name: BullBurger<br>
+Ticker: $BBGR<br>
+Network: Solana<br>
+Contract Address: Coming Soon
+</p>
 
 </div>
 
@@ -225,11 +327,9 @@ Coming Soon
 
 <footer>
 
-©2026 BullBurger
+🐂 Every Bull Run Needs Fuel. 🍔<br><br>
 
-<br><br>
-
-Powered by Burgers 🍔
+© 2026 BullBurger
 
 </footer>
 
