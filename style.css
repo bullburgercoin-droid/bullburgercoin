@@ -1,1 +1,174 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+}
 
+body{
+background:linear-gradient(135deg,#050505,#111,#1a1200,#050505);
+background-size:400% 400%;
+animation:bgMove 12s ease infinite;
+color:white;
+overflow-x:hidden;
+}
+
+@keyframes bgMove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+.navbar{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 30px;
+background:rgba(0,0,0,.65);
+backdrop-filter:blur(10px);
+z-index:999;
+}
+
+.logo{
+font-size:28px;
+font-weight:bold;
+color:#FFD700;
+}
+
+.menu a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+transition:.3s;
+}
+
+.menu a:hover{
+color:#FFD700;
+}
+
+.hero{
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:100px 20px 50px;
+}
+
+.hero img{
+width:300px;
+max-width:90%;
+filter:drop-shadow(0 0 25px gold);
+animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(-15px);}
+}
+
+.hero h1{
+font-size:64px;
+color:#FFD700;
+margin-top:20px;
+}
+
+.hero h2{
+margin-top:10px;
+font-size:28px;
+}
+
+.hero p{
+margin-top:15px;
+max-width:650px;
+line-height:1.8;
+color:#ddd;
+}
+
+.buttons{
+margin-top:30px;
+}
+
+.btn{
+display:inline-block;
+padding:15px 30px;
+border-radius:40px;
+text-decoration:none;
+font-weight:bold;
+margin:8px;
+transition:.3s;
+}
+
+.gold{
+background:#FFD700;
+color:black;
+}
+
+.blue{
+background:#229ED9;
+color:white;
+}
+
+.btn:hover{
+transform:scale(1.08);
+box-shadow:0 0 20px rgba(255,215,0,.5);
+}
+
+.card{
+width:90%;
+max-width:900px;
+margin:35px auto;
+padding:30px;
+background:rgba(255,255,255,.06);
+border:1px solid rgba(255,215,0,.2);
+backdrop-filter:blur(10px);
+border-radius:20px;
+}
+
+.card h3{
+color:#FFD700;
+margin-bottom:15px;
+}
+
+.card ul{
+padding-left:20px;
+line-height:2;
+}
+
+footer{
+text-align:center;
+padding:50px 20px;
+color:#aaa;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:42px;
+}
+
+.hero h2{
+font-size:22px;
+}
+
+.hero img{
+width:220px;
+}
+
+.menu{
+display:none;
+}
+
+.btn{
+display:block;
+margin:12px auto;
+width:220px;
+text-align:center;
+}
+
+}
