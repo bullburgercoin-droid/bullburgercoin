@@ -1,133 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BullBurger | Flip Burgers. Fuel Bull Runs.</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="style.css">
+<title>BullBurger | The Hungriest Bull on Solana</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#080808;
+    color:white;
+}
+
+header{
+    padding:25px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:30px;
+    font-weight:bold;
+    color:#ffb300;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+}
+
+.hero{
+    min-height:90vh;
+    display:flex;
+    align-items:center;
+    justify-content:space-around;
+    padding:50px 8%;
+    flex-wrap:wrap;
+}
+
+.hero-text{
+    max-width:550px;
+}
+
+.hero h1{
+    font-size:65px;
+    color:#ffb300;
+}
+
+.hero p{
+    font-size:22px;
+    margin:20px 0;
+    color:#ddd;
+}
+
+.btn{
+    display:inline-block;
+    padding:15px 30px;
+    margin:10px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+    background:#ffb300;
+    color:black;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+}
+
+.mascot{
+    width:380px;
+    max-width:90%;
+    filter:drop-shadow(0 0 30px #ffb300);
+}
+
+.section{
+    padding:60px 8%;
+    text-align:center;
+}
+
+.section h2{
+    font-size:40px;
+    color:#ffb300;
+    margin-bottom:30px;
+}
+
+.cards{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.card{
+    background:#151515;
+    padding:30px;
+    border-radius:20px;
+    width:280px;
+    border:1px solid #333;
+}
+
+.card h3{
+    color:#ffb300;
+    margin-bottom:15px;
+}
+
+footer{
+    padding:30px;
+    text-align:center;
+    background:#050505;
+    color:#aaa;
+}
+
+@media(max-width:700px){
+    .hero h1{
+        font-size:45px;
+    }
+}
+</style>
+
 </head>
 
 <body>
 
-<nav class="navbar">
-  <div class="logo">🍔 BullBurger</div>
+<header>
+<div class="logo">🐂 BullBurger</div>
 
-  <div class="menu">
-    <a href="https://x.com/BullBurgerCoin" target="_blank">X</a>
-    <a href="https://t.me/BullBurgerCoin" target="_blank">Telegram</a>
-  </div>
+<nav>
+<a href="#">Home</a>
+<a href="#token">Token</a>
+<a href="#roadmap">Roadmap</a>
 </nav>
+
+</header>
+
 
 <section class="hero">
 
-<img src="images/bullburger.png" alt="BullBurger">
+<div class="hero-text">
 
-<h1>BullBurger</h1>
-
-<h2>Flip Burgers. Fuel Bull Runs.</h2>
+<h1>BULLBURGER</h1>
 
 <p>
-The Tastiest Meme Coin on Solana.
-Built by the community.
-Powered by memes.
+The Hungriest Bull on Solana 🍔🐂  
+A community meme coin powered by burgers, memes, and bullish energy.
 </p>
 
-<div class="buttons">
+<a class="btn" href="#">Buy $BULLBURGER</a>
 
-<a href="https://x.com/BullBurgerCoin"
-target="_blank"
-class="btn gold">
-Follow on X
-</a>
+<a class="btn" href="#">Join Telegram</a>
 
-<a href="https://t.me/BullBurgerCoin"
-target="_blank"
-class="btn blue">
-Join Telegram
-</a>
+</div>
+
+
+<img class="mascot" src="MAScot-image.png">
+
+</section>
+
+
+
+<section class="section" id="token">
+
+<h2>Tokenomics</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Chain</h3>
+<p>Solana</p>
+</div>
+
+<div class="card">
+<h3>Tax</h3>
+<p>0%</p>
+</div>
+
+<div class="card">
+<h3>Community</h3>
+<p>100% Driven by holders</p>
+</div>
 
 </div>
 
 </section>
 
-<section class="card">
 
-<h3>🍔 About</h3>
 
-<p>
+<section class="section" id="roadmap">
 
-BullBurger ($BBGR) is a community-driven meme coin built on Solana.
+<h2>Roadmap</h2>
 
-No fake promises.
+<div class="cards">
 
-No complicated roadmap.
+<div class="card">
+<h3>Phase 1</h3>
+<p>Launch 🚀<br>Community Building</p>
+</div>
 
-Just burgers, memes and bulls.
+<div class="card">
+<h3>Phase 2</h3>
+<p>Marketing<br>More Memes</p>
+</div>
 
-</p>
+<div class="card">
+<h3>Phase 3</h3>
+<p>Coin Listings<br>Moon Mission 🌙</p>
+</div>
 
-</section>
-
-<section class="card">
-
-<h3>🚀 Roadmap</h3>
-
-<ul>
-
-<li>✅ Brand Creation</li>
-
-<li>✅ Website</li>
-
-<li>✅ Community Building</li>
-
-<li>🚀 Pump.fun Launch</li>
-
-<li>🌕 CoinGecko</li>
-
-<li>💎 CoinMarketCap</li>
-
-</ul>
+</div>
 
 </section>
 
-<section class="card">
-
-<h3>💰 Token</h3>
-
-<p>
-
-Name : BullBurger
-
-<br><br>
-
-Ticker : BBGR
-
-<br><br>
-
-Network : Solana
-
-<br><br>
-
-Contract :
-
-Coming Soon
-
-</p>
-
-</section>
 
 <footer>
 
-🐂 Every Bull Run Needs Fuel.
-
-<br>
-
-🍔 BullBurger © 2026
+<p>© 2026 BullBurger Coin 🐂🍔</p>
 
 </footer>
 
-<script src="script.js"></script>
 
 </body>
 </html>
